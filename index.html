@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelSmart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="responsiveCss/responsiveHeader.css">
+
+
+   
+  </head>
+<body>
+    <!-- HEADER -->
+   <header>
+    <div class="logo">
+        <img src="images/2-removebg-preview.png"  alt="">
+      </div>
+      <div class="nav-menu-icon">
+        <i class="fa-solid fa-bars menu-icon"></i>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li class="menu_list">
+            <span class="front fas fa-home"></span>
+            <a href="#Home" class="side">Home</a>
+          </li>
+          <li class="menu_list">
+            <span class="front fas fa-info-circle"></span>
+            <a href="#Aboutus" class="side">About Us</a>
+          </li>
+          <li class="menu_list">
+            <span class="front fas fa-book"></span>
+            <a href="#catalog" class="side">Trip Catalog</a>
+          </li>
+          <li class="menu_list">
+            <span class="front fas fa-star"></span>
+            <a href="#reviews" class="side"> Tour Review </a>
+           
+          </li>
+          <li class="menu_list">
+            <span class="front fas fa-envelope"></span>
+            <a href="#contactss" class="side">Contact Us</a>
+          </li>
+          <li class="menu_list">
+            <span class="front fas fa-sitemap"></span>
+            <a href="#Sitemap" class="side">Sitemap</a>
+          </li>
+          <li class="menu_list">
+            <span class="front fas fa-comments"></span>
+            <a href="#feedback" class="side">Feedback</a>
+          </li>
+        </ul>
+      </nav>
+
+ 
+     
+</header>
+
+      <!-- HOME -->
+        <div class="video-slider" id="Home">
+            <video autoplay muted loop class="slider-video">
+                <source src="images/Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+        </div>
+       <!--ABOUT US  -->
+       <main id="Aboutus">
+        <div class="content">
+          <h1>About Us</h1>
+          <p>Welcome to TravelSmart, where we are dedicated to crafting exceptional travel experiences. With years of expertise in designing unforgettable journeys, we are committed to meeting your unique travel needs. Whether you're searching for adventure, luxury, or a peaceful retreat, our experienced team is here to ensure your journey is tailored to perfection. Trust us to guide you every step of the way as you explore the world's most stunning destinations.</p>
+          <button class="btn">Explore More</button>
+        </div>
+  
+        <div class="stack">
+          <div class="card">
+            <img src="images/photo-1512100356356-de1b84283e18.avif" alt="Travel Image 1" />
+          </div>
+          <div class="card">
+            <img src="images/photo-1516483638261-f4dbaf036963.avif" alt="Travel Image 2" />
+          </div>
+          <div class="card">
+            <img src="images/photo-1551918120-9739cb430c6d.avif" alt="Travel Image 3" />
+          </div>
+          <div class="card">
+            <img src="images/plane.avif" alt="Travel Image 4" />
+          </div>
+          <div class="card">
+            <img src="images/bus.avif" alt="Travel Image 5" />
+          </div>
+        </div>
+      </main>
+      <!-- TRIPS -->
+      <section id="catalog">
+        <div class="search-filter-area">
+          <div class="search-box">
+        <input type="text" id="search" placeholder="Search for a destination...">
+        <button id="search-button">Search</button>
+      </div>
+    
+        <label for="sort-dropdown">Sort by:</label>
+        <select id="sort-dropdown">
+            <option value="">Select...</option>
+            <option value="name-asc">Name A to Z</option>
+            <option value="name-desc">Name Z to A</option>
+            <option value="price-asc">Price Low to High</option>
+            <option value="price-desc">Price High to Low</option>
+        </select>
+    
+        <label for="accommodation-dropdown">Filter by Accommodation:</label>
+        <select id="accommodation-dropdown">
+            <option value="">Select...</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Hostel">Hostel</option>
+        </select>
+
+      </div>
+   <!-- Trip Catalog -->
+   <div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" data-target="home">Trip Catalog</button>
+        <button class="tab-button" data-target="about">Transport</button>
+        <button class="tab-button" data-target="blog">Culture</button>
+        <button class="tab-button" data-target="family-tour"> Packages</button>
+        <button class="tab-button" data-target="contact">Deals</button>
+    </div>
+    <div class="tab-content">
+        <div id="home" class="tab-pane active" >
+            <h2>Trip Catalog</h2>
+            <div id="trip-list" class="trip-grid trip-catalog">
+              <!-- Trip items will be displayed here -->
+          </div>
+        </div>
+        <div id="about" class="tab-pane">
+            <h2>Transport</h2>
+            <div class="transport-grid">
+              <div class="transport-box">
+                <h3><i class="fas fa-plane"></i> Flights</h3>
+                <p>Nearest Airport: JFK International</p>
+                <p>Estimated Travel Time: 2 hours</p>
+                <p>Price: $300</p>
+              </div>
+            
+              <div class="transport-box">
+                <h3><i class="fas fa-train"></i> Trains</h3>
+                <p>Nearest Train Station: Grand Central</p>
+                <p>Estimated Travel Time: 3.5 hours</p>
+                <p>Price: $80</p>
+              </div>
+            
+              <div class="transport-box">
+                <h3><i class="fas fa-bus"></i> Buses</h3>
+                <p>Nearest Bus Terminal: Port Authority</p>
+                <p>Estimated Travel Time: 4 hours</p>
+                <p>Price: $50</p>
+              </div>
+            
+              <div class="transport-box">
+                <h3><i class="fas fa-car"></i> Car Rentals</h3>
+                <p>Available at: JFK International</p>
+                <p>Estimated Travel Time: 2.5 hours</p>
+                <p>Price: $120/day</p>
+              </div>
+            
+              <div class="transport-box">
+                <h3><i class="fas fa-ship"></i> Ferries</h3>
+                <p>Nearest Ferry Terminal: Battery Park</p>
+                <p>Estimated Travel Time: 1 hour</p>
+                <p>Price: $25</p>
+              </div>
+            
+              <div class="transport-box">
+                <h3><i class="fas fa-taxi"></i> Ride Sharing</h3>
+                <p>Service: Uber/Lyft</p>
+                <p>Estimated Travel Time: 2 hours</p>
+                <p>Price: $70</p>
+              </div>
+            </div>
+        </section>
+        
+    
+         
+        </div>
+        <div id="blog" class="tab-pane tab-content culture-tab" >
+            <h2>Culture</h2>
+            <div class="country-grid">
+                <div class="country-card">
+                  <img src="images/effel tower.avif" alt="Paris">
+                  <h3>Paris, France</h3>
+                  <p>Known for its art, fashion, and iconic landmarks like the Eiffel Tower.</p>
+                </div>
+                <div class="country-card">
+                  <img src="images/newwwww.avif" alt="New York">
+                  <h3>New York, USA</h3>
+                  <p>A melting pot of cultures, famous for its skyscrapers and fast-paced life.</p>
+                </div>
+                <div class="country-card">
+                  <img src="images/desert safari.avif" alt="Dubai">
+                  <h3>Dubai, UAE</h3>
+                  <p>Combines Islamic traditions with modern luxury, home to the Burj Khalifa.</p>
+                </div>
+                <div class="country-card">
+                  <img src="images/korean dress.avif" alt="South Korea">
+                  <h3>South Korea</h3>
+                  <p>Known for K-pop, ancient temples, and a blend of tradition and modernity.</p>
+                </div>
+                <div class="country-card">
+                  <img src="images/srilankaa.avif" alt="Sri Lanka">
+                  <h3>Sri Lanka</h3>
+                  <p>Rich in Buddhist traditions and famous for its tea plantations and beaches.</p>
+                </div>
+                <div class="country-card">
+                  <img src="images/canada culture.avif" alt="Canada">
+                  <h3>Canada</h3>
+                  <p>A multicultural country known for its politeness, nature, and winter sports.</p>
+                </div>
+              </div>
+              
+        </div>
+        <div id="family-tour" class="culture-tab tab-pane">
+            
+            <h2>Tour Packages</h2>
+            <div class="country-grid">
+              <div class="country-card">
+                <img src="images/family tour.avif" alt="Family Tour">
+                <h3>Family Tour</h3>
+                <p>Perfect for a relaxing and enjoyable family vacation, offering kid-friendly activities and attractions.</p>
+              </div>
+              <div class="country-card">
+                <img src="images/adventure tour.avif" alt="Adventure Tour">
+                <h3>Adventure Tour</h3>
+                <p>For thrill-seekers, offering exciting outdoor activities such as hiking, rafting, and more.</p>
+              </div>
+              <div class="country-card">
+                <img src="images/luxury.avif" alt="Luxury Tour">
+                <h3>Luxury Tour</h3>
+                <p>Experience opulence with top-notch accommodations, gourmet meals, and exclusive experiences.</p>
+              </div>
+              <div class="country-card">
+                <img src="images/cultural.avif" alt="Cultural Tour">
+                <h3>Cultural Tour</h3>
+                <p>Immerse yourself in the rich heritage, arts, and traditions of the region's unique culture.</p>
+              </div>
+            </div>
+            
+        </div>
+        <div id="contact" class="culture-tab tab-pane">
+            <h2>Deals</h2>
+            <!-- DISCOUNT OFFERS -->
+    <div class="containerr">
+      <!-- Sidebar Filters -->
+      <div class="sidebar">
+          <h3>Filter by:</h3>
+          
+          <h4>Budget</h4>
+          <div class="filter-group">
+              <input type="checkbox" id="budget1">
+              <label for="budget1">Below PKR 200,000</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="budget2">
+              <label for="budget2">PKR 200,000 - PKR 300,000</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="budget3">
+              <label for="budget3">PKR 300,000 - PKR 400,000</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="budget4">
+              <label for="budget4">Above PKR 400,000</label>
+          </div>
+
+          <h4>No of Days</h4>
+          <div class="filter-group">
+              <input type="checkbox" id="days1">
+              <label for="days1">3 - 5 Days</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="days2">
+              <label for="days2">5 - 8 Days</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="days3">
+              <label for="days3">8 - 12 Days</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="days4">
+              <label for="days4">12 - 15 Days</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="days5">
+              <label for="days5">Above 15 Days</label>
+          </div>
+
+          <h4>Destination</h4>
+          <div class="filter-group">
+              <input type="checkbox" id="destination1">
+              <label for="destination1">Maldives</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="destination2">
+              <label for="destination2">Thailand</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="destination3">
+              <label for="destination3">Dubai</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="destination4">
+              <label for="destination4">Turkey</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="destination5">
+              <label for="destination5">Switzerland</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="destination6">
+              <label for="destination6">Italy</label>
+          </div>
+
+          <h4>Package Type</h4>
+          <div class="filter-group">
+              <input type="checkbox" id="packageType1">
+              <label for="packageType1">Luxury</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="packageType2">
+              <label for="packageType2">Adventure</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="packageType3">
+              <label for="packageType3">Family</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="packageType4">
+              <label for="packageType4">Romantic</label>
+          </div>
+
+          <h4>Hotel Ratings</h4>
+          <div class="filter-group">
+              <input type="checkbox" id="rating5">
+              <label for="rating5">5 Star</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="rating4">
+              <label for="rating4">4 Star</label>
+          </div>
+          <div class="filter-group">
+              <input type="checkbox" id="rating3">
+              <label for="rating3">3 Star</label>
+          </div>
+      </div>
+            <div class="content">
+              <!-- First Package (Maldives) -->
+              <div class="package">
+                  <div class="image">
+                      <img src="images/maldives.avif" alt="Maldives Package">
+                      <span class="popular">Popular</span>
+                  </div>
+                  <div class="details">
+                      <h2>Maldives Retreat: Cinnamon Velifushi</h2>
+                      <p>5 ★ Hotel</p>
+                      <div class="features">
+                          <span>Breakfast & Dinner Included</span>
+                          <span>Fitness Center</span>
+                          <span>Shared Transfer</span>
+                      </div>
+                      <p class="price"><del>PKR 437,500</del> <strong>PKR 407,900</strong></p>
+                      <p>5 Nights Keyodhoo Eh'mafushi</p>
+                      <a href="#" class="btn">View Details</a>
+                  </div>
+              </div>
+    
+              <!-- Second Package (Thailand) -->
+              <div class="package">
+                  <div class="image">
+                      <img src="images/thailand.avif" alt="Thailand Package">
+                      <span class="deal">Deal of the Day</span>
+                  </div>
+                  <div class="details">
+                      <h2>Thailand Beaches: Centara Ras Fushi</h2>
+                      <p>4 ★ Hotel</p>
+                      <div class="features">
+                          <span>Access to Private Beach</span>
+                          <span>Spa Center</span>
+                          <span>Shared Transfer</span>
+                      </div>
+                      <p class="price"><del>PKR 345,000</del> <strong>PKR 299,500</strong></p>
+                      <p>5 Nights North Male Atoll</p>
+                      <a href="#" class="btn">View Details</a>
+                  </div>
+              </div>
+    
+              <!-- Third Package (Dubai) -->
+              <div class="package">
+                  <div class="image">
+                      <img src="images/dubaii.avif" alt="Dubai Package">
+                      <span class="popular">Top Choice</span>
+                  </div>
+                  <div class="details">
+                      <h2>Dubai Luxury: Atlantis The Palm</h2>
+                      <p>5 ★ Hotel</p>
+                      <div class="features">
+                          <span>Exclusive Suite</span>
+                          <span>Luxury Spa</span>
+                          <span>Airport Transfers</span>
+                      </div>
+                      <p class="price"><del>PKR 650,000</del> <strong>PKR 599,900</strong></p>
+                      <p>4 Nights Dubai, Palm Island</p>
+                      <a href="#" class="btn">View Details</a>
+                  </div>
+              </div>
+    
+              <!-- Fourth Package (Turkey) -->
+              <div class="package">
+                  <div class="image">
+                      <img src="images/turkey.avif" alt="Turkey Package">
+                      <span class="deal">Limited Offer</span>
+                  </div>
+                  <div class="details">
+                      <h2>Turkey Escape: Sultanahmet Palace</h2>
+                      <p>4 ★ Hotel</p>
+                      <div class="features">
+                          <span>City Tours</span>
+                          <span>Private Guide</span>
+                          <span>All Meals Included</span>
+                      </div>
+                      <p class="price"><del>PKR 280,000</del> <strong>PKR 250,000</strong></p>
+                      <p>7 Nights Istanbul</p>
+                      <a href="#" class="btn">View Details</a>
+                  </div>
+              </div>
+    
+              <!-- Fifth Package (Switzerland) -->
+              <div class="package">
+                  <div class="image">
+                      <img src="images/switzerland.avif" alt="Switzerland Package">
+                      <span class="deal">Discount Offer</span>
+                  </div>
+                  <div class="details">
+                      <h2>Switzerland: Swiss Alps Adventure</h2>
+                      <p>5 ★ Hotel</p>
+                      <div class="features">
+                          <span>Luxury Stay</span>
+                          <span>Mountain Tours</span>
+                          <span>Breakfast & Dinner</span>
+                      </div>
+                      <p class="price"><del>PKR 800,000</del> <strong>PKR 750,000</strong></p>
+                      <p>6 Nights Swiss Alps</p>
+                      <a href="#" class="btn">View Details</a>
+                  </div>
+              </div>
+    
+              <!-- Sixth Package (Italy) -->
+              <div class="package">
+                  <div class="image">
+                      <img src="images/italy.avif" alt="Italy Package">
+                      <span class="deal">Exclusive Offer</span>
+                  </div>
+                  <div class="details">
+                      <h2>Italy Romance: Venice & Rome</h2>
+                      <p>5 ★ Hotel</p>
+                      <div class="features">
+                          <span>Gondola Ride</span>
+                          <span>City Tour</span>
+                          <span>Luxury Stay</span>
+                      </div>
+                      <p class="price"><del>PKR 920,000</del> <strong>PKR 850,000</strong></p>
+                      <p>7 Nights Venice & Rome</p>
+                      <a href="#" class="btn">View Details</a>
+                  </div>
+              </div>
+    
+          </div>
+      </div>
+        </div>
+    </div>
+</div>
+
+<div class="reviews-section" id="reviews">
+  <h2 class="reviews-title">Customer Reviews</h2>
+
+  <div class="review-item review-item-1">
+      <div class="review-header">
+          <img src="images/2.jfif" alt="Olivia Bennett" class="review-avatar">
+          <div class="reviewer-info">
+              <h3 class="reviewer-name">Olivia Bennett</h3>
+              <p class="review-date">January 19, 2024</p>
+          </div>
+      </div>
+      <div class="review-rating rating-1">★★★★★</div>
+      <p class="review-text">
+        "I had an incredible experience booking my trip through Adventure Seekers Paradise! The website is user-friendly, making it easy to find and compare various travel packages. I booked an adventure trip to Costa Rica, and everything was organized perfectly—from the hotel to the activities. The customer service team was responsive and helpful with all my queries. Highly recommend for anyone looking for a hassle-free travel experience!"
+      </p>
+     
+  </div>
+
+  <div class="review-item review-item-2">
+      <div class="review-header">
+          <img src="images/1.jfif" alt="Linda Lewis" class="review-avatar">
+          <div class="reviewer-info">
+              <h3 class="reviewer-name">Linda Lewis</h3>
+              <p class="review-date">January 10, 2024</p>
+          </div>
+      </div>
+      <div class="review-rating rating-2">★★★★</div>
+      <p class="review-text">
+        "Explore The World has a fantastic selection of travel options! I recently booked a European tour and was impressed with the detailed itineraries and local insights provided. The booking process was smooth, and I appreciated the transparent pricing. My only complaint was a slight delay in customer service response time, but the overall experience was great. Definitely a solid choice for planning your next adventure!"
+      </p>
+     
+  </div>
+
+  <div class="review-item review-item-3">
+      <div class="review-header">
+          <img src="images/5.jfif" alt="Ethan Cox" class="review-avatar">
+          <div class="reviewer-info">
+              <h3 class="reviewer-name">Ethan Cox</h3>
+              <p class="review-date">January 8, 2024</p>
+          </div>
+      </div>
+      <div class="review-rating rating-3">★★★★★</div>
+      <p class="review-text">
+        " TravelSmart exceeded my expectations! The website is beautifully designed and offers a wealth of information about each destination. I booked a romantic getaway to Bali, and everything went off without a hitch. From the stunning accommodations to the personalized itinerary, I felt truly valued as a customer. Plus, the tips and recommendations were spot-on! I can't wait to book my next trip with them!"
+
+
+      </p>
+      
+  </div>
+
+  
+</div>
+
+
+
+    <!-- OUR SERVICES -->
+    <div class="services-section" style=" background: linear-gradient(135deg, #e0f7fa, #fffde7); ">
+      <h3 style="color: #030929d7;">Our Services</h3>
+      <h1 style="color: #030929d7;">Countless Experience</h1>
+      <div class="services-grid">
+          <div class="service-box">
+              <i class="icon globe"></i>
+              <h4>Worldwide</h4>
+              <p>At Travel Smart, we offer unparalleled travel services with a global reach. Explore destinations worldwide with our expertly crafted solutions tailored to your needs.</p>
+          </div>
+          <div class="service-box">
+              <i class="icon adventure"></i>
+              <h4>Adventures</h4>
+              <p>Travel Smart curates thrilling adventures tailored to your interests and preferences. We craft unforgettable trips that take you to exciting destinations and create lifelong memories.</p>
+          </div>
+          <div class="service-box">
+              <i class="icon food"></i>
+              <h4>Food & Drinks</h4>
+              <p>Indulge in exquisite food and drinks on every flight with Travel Smart. Our premium in-flight service is designed to elevate your travel experience and keep you coming back for more.</p>
+          </div>
+          <div class="service-box">
+              <i class="icon hotel"></i>
+              <h4>Affordable Hotels</h4>
+              <p>Travel Smart offers a range of affordable hotels that don’t compromise on quality. We meticulously select accommodations to ensure you get exceptional value and comfort during your stay.</p>
+          </div>
+          <div class="service-box">
+              <i class="icon price"></i>
+              <h4>Affordable Price</h4>
+              <p>At Travel Smart, we believe everyone deserves to explore the world, which is why we offer tickets at affordable prices. Our commitment to value ensures that traveling with us is within reach for everyone.</p>
+          </div>
+          <div class="service-box">
+              <i class="icon service"></i>
+              <h4>24/7 Services</h4>
+              <p>Travel Smart provides 24/7 customer support to assist you whenever you need. Our dedicated team is always available to ensure your travel experience is smooth and hassle-free.</p>
+          </div>
+      </div>
+  </div>
+  <!-- FEEDBACK -->
+  <section class="feedback-section1" id="feedback">
+    <h2>How satisfied are you <br> with our services? </h2>
+    <div class="rating">
+        <div class="child unhappy">
+            <p>😢</p>
+            <h3>Unhappy</h3>
+        </div>
+        <div class="child happy">
+            <p>😊</p>
+            <h3>Happy</h3>
+        </div>
+        <div class="child satisfied">
+            <p>😁</p>
+            <h3>Satisfied</h3>
+        </div>
+    </div>
+    <div class="feedback-btn">
+        <button class="fdbtn" id="btn" type="button">Send Review</button>
+    </div>
+</section>
+<!-- contact us -->
+<div class="contact-section1" id="contactss">
+    <div class="contact-container1" >
+      <div class="contact-info1">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Send us a message using the form below or visit us using the map.</p>
+  
+        <form action="#" method="POST" id="contactForm" class="contact-form1">
+          <div class="form-group">
+           <label for="name" required>Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="email" required >Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="phone" required >Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+          </div>
+  
+          <div class="form-group">
+            <label for="subject"required >Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="message" required >Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+  
+          <button type="submit" class="btn-submit1">Send Message</button>
+        </form>
+      </div>
+  
+      <!-- Map Section -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354340749587!2d144.95373631587566!3d-37.816279279751894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f1fb07d9%3A0xfb7a8d529c0bb5e7!2sFederation%20Square%2C%20Melbourne%20VIC%203001%2C%20Australia!5e0!3m2!1sen!2sus!4v1627044921602!5m2!1sen!2sus"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+  
+        <div class="Sitemap" id="Sitemap"> <img src="images/Capture.PNG" alt=""></div>
+           
+ <!-- FOOTER -->
+  <div class="custom-bodyy">
+ <footer class="footer">
+  <div class="container">
+      <!-- Contact Information -->
+      <div class="footer-column contact-section">
+          <h4>Contact Us</h4>
+          <ul class="contact-info">
+              <li><i class="fas fa-phone"></i> 703-999-0462</li>
+              <li><i class="fas fa-envelope"></i> alifarwa446@gmail.com</li>
+              <li><i class="fas fa-globe"></i> www.charmandawe.com</li>
+          </ul>
+      </div>
+
+      <!-- Logo Section -->
+      <div class="footer-column logo-section">
+          <img src="images/2-removebg-preview.png" alt="Charm & Awe Logo">
+      </div>
+
+      <!-- Subscribe Section -->
+      <div class="footer-column subscribe-section">
+          <h4>Join the List</h4>
+          <div class="subscribe-form">
+              <input type="text" placeholder="Enter your email...">
+              <button type="submit" style=" border-radius: 10px; border-color: 2px solid black;">Subscribe <i class="fas fa-arrow-right"></i></button>
+          </div>
+      </div>
+  </div>
+
+  <div class="bottom-bar" >
+      <div class="container-footer">
+          <div class="footer-icons">
+              <a href="#Home" class="footer-icon"><i class="fas fa-home"></i> Home</a>
+              <a href="#Aboutus" class="footer-icon"><i class="fas fa-info-circle"></i> About Us</a>
+              <a href="#catalog" class="footer-icon"><i class="fas fa-book"></i> Trip Catalog</a>
+              <a href="#reviews" class="footer-icon"><i class="fas fa-star"></i> Tour Review</a>
+              <a href="#contactss" class="footer-icon"><i class="fas fa-envelope"></i> Contact Us</a>
+              <a href="#Sitemap" class="footer-icon"><i class="fas fa-sitemap"></i> Sitemap</a>
+              <a href="#feedback" class="footer-icon"><i class="fas fa-comments"></i> Feedback</a>
+          </div>
+          
+          <p class="footer-text">© TravelSmart 2024 | Independent Contractor with TravelSmart CST #2129700-40</p>
+      </div>
+  </div>
+</div>
+</footer>
+
+</body>
+</html>
+<script src="java.js"></script>
+<script src="tabs.js"></script>
+<script src="responsiveJS/header.js"></script>
+<script src="contactForm.js"></script>
